@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finsweet - Створюємо вражаючі сайти для стартапів</title>
+    <meta name="description" content="Finsweet створює сучасні веб-сайти для стартапів з ефективним дизайном та швидкодією.">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="icon" href="assets/images/favicon-32x32.svg">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="assets/images/mstile-150x150.png">
+    <style>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+          --color-dark-grey: #282938;
+          --color-white: #FFFFFF;
+          --bg-white: #FFFFFF;
+          --fs-body: 14px;
+          --fs-title: 28px;
+      }
+      body {
+          font-family: 'Poppins', 'Segoe UI', sans-serif;
+          font-size: var(--fs-body);
+          line-height: 1.6;
+          color: var(--color-dark-grey);
+          background-color: var(--bg-white);
+          overflow-x: hidden;
+      }
+      h1, h2, h3, h4, h5, h6 {
+          font-size: var(--fs-title);
+          color: var(--color-dark-grey);
+          line-height: 1.2;
+      }
+      a {
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
+      }
+      img {
+          max-width: 100%;
+          height: auto;
+      }
+      .container {
+          width: 100%;
+          max-width: 1440px;
+          margin: 0 auto;
+          padding: 0 16px;
+      }
+    </style>
+    <meta property="og:title" content="Finsweet — Створюємо вражаючі сайти для стартапів">
+    <meta property="og:description" content="Finsweet створює сучасні веб-сайти для стартапів, що виділяються дизайном, швидкодією і зручністю.">
+    <meta property="og:url" content="http://localhost/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Finsweet — Створюємо вражаючі сайти для стартапів">
+    <meta name="twitter:description" content="Finsweet створює сучасні веб-сайти для стартапів, що виділяються дизайном, швидкодією і зручністю.">
+    <meta name="twitter:site" content="@finsweet_example">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fendikouas9697back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="assets/images/img_logo.svg" alt="Finsweet" class="logo">
+            <nav class="nav-menu" id="navMenu">
+                <div class="nav-overlay" id="navOverlay"></div>
+                <div class="nav-items">
+                    <a class="nav-item active">Головна</a>
+                    <a href="aboutus.html" class="nav-item">Про нас</a>
+                    <a href="features.html" class="nav-item">Можливості</a>
+                    <a href="price.html" class="nav-item">Ціни</a>
+                    <a href="#" class="nav-item">FAQ</a>
+                    <a href="blog.html" class="nav-item">Блог</a>
+                    <a class="nav-item contact-btn" data-open-modal>Зв’язатися з нами</a>
+                </div>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Перемкнути тему">
+            <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 2V3M10 17V18M18 10H17M3 10H2M15.657 4.343L14.95 5.05M5.05 14.95L4.343 15.657M15.657 15.657L14.95 14.95M5.05 5.05L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 11.5C17.5 15.5 13.5 18.5 9.5 18C5.5 17.5 2.5 13.5 3 9.5C3.5 5.5 7 2.5 11 3C9 3.5 7.5 5.5 7.5 7.5C7.5 10 9.5 12 12 12C14 12 15.5 10.5 16 9C17 9.5 17.5 10.5 18 11.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Перемикач навігації">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    <section class="section-wrapper hero-section animate-on-scroll">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Створюємо вражаючі сайти для молодих стартапів</h1>
+                <p class="hero-description">Ми допомагаємо бізнесам розвиватися онлайн, створюючи сучасні, швидкі та ефективні сайти.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Наші роботи</a>
+                    <a href="price.html" class="btn-secondary">
+                        Переглянути ціни
+                        <img src="assets/images/img_arrow_1.svg" alt="Стрілка">
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/img_illustration.svg" alt="Ілюстрація сайту">
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper work-section animate-on-scroll">
+        <div class="work-content">
+            <div class="work-intro">
+                <h2 class="section-title">Як ми працюємо</h2>
+                <p class="section-description">Ми проходимо всі етапи — від стратегії до розробки, щоб створити ідеальний продукт для вас.</p>
+                <a class="view-more-link" data-open-modal>
+                    Зв’яжіться з нами
+                    <img src="assets/images/img_arrow_2.svg" alt="Стрілка">
+                </a>
+            </div>
+            <div class="work-grid">
+                <div class="work-item animate-item">
+                    <div class="work-number"><span>01</span></div>
+                    <h3 class="work-title">Стратегія</h3>
+                    <p class="work-desc">Розробляємо план дій, що відповідає вашим бізнес-цілям.</p>
+                </div>
+                <div class="work-item animate-item">
+                    <div class="work-number"><span>02</span></div>
+                    <h3 class="work-title">Вайрфрейм</h3>
+                    <p class="work-desc">Створюємо структуру сторінок, щоб показати логіку сайту.</p>
+                </div>
+                <div class="work-item animate-item">
+                    <div class="work-number"><span>03</span></div>
+                    <h3 class="work-title">Дизайн</h3>
+                    <p class="work-desc">Розробляємо естетичний та зручний інтерфейс користувача.</p>
+                </div>
+                <div class="work-item animate-item">
+                    <div class="work-number"><span>04</span></div>
+                    <h3 class="work-title">Розробка</h3>
+                    <p class="work-desc">Перетворюємо дизайн у працюючий, оптимізований вебсайт.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper projects-section animate-on-scroll">
+        <div class="container">
+            <div class="projects-header">
+                <h2 class="section-title">Наші проєкти</h2>
+                <a href="#" class="view-more-link">
+                    Переглянути більше
+                    <img src="assets/images/img_arrow_1_blue_gray_900_01.svg" alt="Стрілка" width="24" height="1">
+                </a>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card main animate-item">
+                    <h3 class="project-title">Дизайн сайту Workhub Office</h3>
+                    <p class="project-description">Сучасний корпоративний сайт з фокусом на UX/UI.</p>
+                    <a href="#" class="project-link">
+                        Переглянути проєкт
+                        <img src="assets/images/img_arrow_2_amber_200_01.svg" alt="Стрілка" width="24" height="1">
+                    </a>
+                </div>
+                <div class="projects-right">
+                    <div class="project-card unisaas animate-item">
+                        <h3 class="project-title">Дизайн сайту Unisaas</h3>
+                        <a href="#" class="project-link">
+                            Переглянути портфоліо
+                            <img src="assets/images/img_arrow_2_amber_200_01.svg" alt="Стрілка" width="24" height="1">
+                        </a>
+                    </div>
+                    <div class="project-card church animate-item"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper features-section animate-on-scroll">
+        <div class="container">
+            <div class="features-intro">
+                <p class="features-subtitle">Наші переваги</p>
+                <h2 class="section-title">Дизайн, що вирішує проблеми — продукт за продуктом</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-item">
+                    <img src="assets/images/img_icon.svg" alt="Іконка" class="feature-icon">
+                    <h3 class="feature-title">Методика Client First</h3>
+                    <p class="feature-description">Ми будуємо роботу навколо потреб клієнта, забезпечуючи максимальний результат.</p>
+                </div>
+                <div class="feature-card animate-item">
+                    <img src="assets/images/img_icon_deep_purple_a700.svg" alt="Іконка" class="feature-icon">
+                    <h3 class="feature-title">Дві безкоштовні ітерації правок</h3>
+                    <p class="feature-description">Ви можете внести зміни та коригування після запуску без додаткової оплати.</p>
+                </div>
+                <div class="feature-card animate-item">
+                    <img src="assets/images/img_icon_deep_purple_a700_34x34.svg" alt="Іконка" class="feature-icon">
+                    <h3 class="feature-title">Індивідуальне налаштування шаблону</h3>
+                    <p class="feature-description">Ми адаптуємо шаблон під ваш бренд і потреби.</p>
+                </div>
+                <div class="feature-card animate-item">
+                    <img src="assets/images/img_icon_34x34.svg" alt="Іконка" class="feature-icon">
+                    <h3 class="feature-title">Підтримка 24/7</h3>
+                    <p class="feature-description">Ми завжди на зв’язку, щоб допомогти з будь-якими питаннями.</p>
+                </div>
+                <div class="feature-card animate-item">
+                    <img src="assets/images/img_icon_1.svg" alt="Іконка" class="feature-icon">
+                    <h3 class="feature-title">Швидка доставка</h3>
+                    <p class="feature-description">Проєкти здаємо вчасно без втрати якості.</p>
+                </div>
+                <div class="feature-card animate-item">
+                    <img src="assets/images/img_icon_2.svg" alt="Іконка" class="feature-icon">
+                    <h3 class="feature-title">Практичний підхід</h3>
+                    <p class="feature-description">Ми залучаємо клієнта до процесу створення продукту на всіх етапах.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+    <div class="testimonial-content">
+      <div class="testimonial-intro">
+        <h2>Що кажуть наші клієнти</h2>
+        <p>Ми цінуємо кожен відгук та пишаємося результатами співпраці.</p>
+      </div>
+      <div class="testimonial-slider-wrapper">
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <blockquote class="testimonial-quote">
+                "Найкраще агентство, з яким ми працювали. Вони чудово розуміють продукт і додають нові функції з увагою до деталей."
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-quote">
+                "Професійна команда, яка завжди вчасно здає проекти. Дизайн перевершив наші очікування, а технічна реалізація бездоганна."
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-quote">
+                "Ми отримали сучасний та функціональний сайт, який значно покращив нашу онлайн-присутність. Рекомендуємо!"
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-quote">
+                "Чудова комунікація протягом всього проекту. Вони швидко реагують на зміни та пропонують найкращі рішення."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-bottom">
+          <div class="swiper author-info-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-author-info">
+                  <img src="https://i.pravatar.cc/150?img=1" alt="Дженні Вілсон" class="author-avatar">
+                  <div>
+                    <div class="author-name">Дженні Вілсон</div>
+                    <div class="author-title">Віце-президент</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-author-info">
+                  <img src="https://i.pravatar.cc/150?img=12" alt="Олександр Петренко" class="author-avatar">
+                  <div>
+                    <div class="author-name">Олександр Петренко</div>
+                    <div class="author-title">CEO, Tech Startup</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-author-info">
+                  <img src="https://i.pravatar.cc/150?img=5" alt="Марія Коваленко" class="author-avatar">
+                  <div>
+                    <div class="author-name">Марія Коваленко</div>
+                    <div class="author-title">Маркетинг-директор</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-author-info">
+                  <img src="https://i.pravatar.cc/150?img=33" alt="Ігор Мельник" class="author-avatar">
+                  <div>
+                    <div class="author-name">Ігор Мельник</div>
+                    <div class="author-title">Product Manager</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-nav">
+            <button class="nav-btn nav-btn-prev" id="prevBtn"></button>
+            <button class="nav-btn nav-btn-next" id="nextBtn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="section-wrapper faq-section animate-on-scroll">
+        <div class="faq-content">
+            <div class="faq-intro">
+                <h2 class="section-title">Часті запитання</h2>
+                <a href="#" class="faq-contact-link">Зв’яжіться з нами, щоб дізнатися більше</a>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active animate-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-number">01</span>
+                        <span class="faq-title">Скільки часу займає розробка?</span>
+                        <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="22" height="22">
+                    </div>
+                    <div class="faq-answer">
+                        Залежно від складності, середній час створення сайту — від 2 до 6 тижнів.
+                    </div>
+                </div>
+                <div class="faq-item animate-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-number">02</span>
+                        <span class="faq-title">Яку систему найменування класів ви використовуєте?</span>
+                        <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+                    </div>
+                    <div class="faq-answer">
+                        Ми дотримуємося структури <strong>Client First</strong>, щоб забезпечити чистий і зрозумілий код.
+                    </div>
+                </div>
+                <div class="faq-item animate-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-number">03</span>
+                        <span class="faq-title">Як ми з вами комунікуємо?</span>
+                        <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+                    </div>
+                    <div class="faq-answer">
+                        Ми спілкуємося через електронну пошту, відеодзвінки або месенджери — як вам зручно.
+                    </div>
+                </div>
+                <div class="faq-item animate-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-number">04</span>
+                        <span class="faq-title">Чи можете ви реалізувати великий проєкт?</span>
+                        <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+                    </div>
+                    <div class="faq-answer">
+                        Звісно! Ми маємо досвід у великих корпоративних і e-commerce проєктах.
+                    </div>
+                </div>
+                <div class="faq-item animate-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-number">05</span>
+                        <span class="faq-title">Як ви підтримуєте якість коду?</span>
+                        <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+                    </div>
+                    <div class="faq-answer">
+                        Ми проводимо тестування, рев’ю коду та дотримуємося суворих стандартів розробки.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper contact-section animate-on-scroll">
+    <div class="contact-content">
+        <div class="contact-bg" aria-hidden="true"></div>
+        <div class="contact-overlay" aria-hidden="true"></div>
+        <div class="contact-intro">
+            <h2 class="section-title">Створюємо вражаючі сайти для стартапів</h2>
+            <p class="section-description">Ми допоможемо втілити вашу ідею в сучасний вебпродукт — швидко, красиво та якісно.</p>
+        </div>
+        <form class="contact-form animate-item" id="contactFormSection">
+            <h3 class="form-title">Надіслати запит</h3>
+            <p class="form-description">Залиште свої дані, і ми зв'яжемося з вами найближчим часом.</p>
+            <div class="form-group">
+                <input type="text" class="form-input" id="sectionName" placeholder="Ваше ім'я" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" id="sectionEmail" placeholder="Електронна пошта" required>
+            </div>
+            <div class="form-group">
+                <input type="url" class="form-input" id="sectionFigma" placeholder="Вставте посилання на ваш дизайн у Figma">
+            </div>
+            <button type="submit" class="btn-primary form-submit">Надіслати запит</button>
+            <a class="btn-secondary contact-secondary-btn" data-open-modal>
+                Зв'язатися з нами
+                <img src="assets/images/img_arrow_1.svg" alt="Стрілка">
+            </a>
+        </form>
+        <div class="form-message" id="sectionFormMessage">
+            <div class="message-content"></div>
+        </div>
+    </div>
+</section>
+    <section class="section-wrapper blog-section animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title blog-section-title">Наш блог</h2>
+            <div class="blog-grid">
+                <article class="blog-card animate-item">
+                    <img src="assets/images/blogim1.webp" alt="Блог" class="blog-image">
+                    <time class="blog-date" datetime="2022-01-19">19 січня 2022</time>
+                    <h3 class="blog-title">Як один користувач Webflow виріс з $0 до $100K за 14 місяців</h3>
+                    <p class="blog-excerpt">Дізнайтеся, як зміна підходу до Webflow допомогла йому збільшити продажі.</p>
+                    <a href="#" class="blog-link">
+                        Читати далі
+                        <img src="assets/images/img_arrow_1_blue_gray_900_01.svg" alt="Стрілка">
+                    </a>
+                </article>
+                <article class="blog-card animate-item">
+                    <img src="assets/images/blogim2.webp" alt="Блог" class="blog-image">
+                    <time class="blog-date" datetime="2022-01-19">19 січня 2022</time>
+                    <h3 class="blog-title">Як один користувач Webflow виріс з $0 до $100K за 14 місяців</h3>
+                    <p class="blog-excerpt">Дізнайтеся, як Webflow змінив його підхід до бізнесу.</p>
+                    <a href="#" class="blog-link">
+                        Читати далі
+                        <img src="assets/images/img_arrow_1_blue_gray_900_01.svg" alt="Стрілка">
+                    </a>
+                </article>
+                <article class="blog-card animate-item">
+                    <img src="assets/images/blogim3.webp" alt="Блог" class="blog-image">
+                    <time class="blog-date" datetime="2022-01-19">19 січня 2022</time>
+                    <h3 class="blog-title">Як один користувач Webflow виріс з $0 до $100K за 14 місяців</h3>
+                    <p class="blog-excerpt">Дізнайтеся, як Webflow допоміг покращити продажі та ефективність.</p>
+                    <a href="#" class="blog-link">
+                        Читати далі
+                        <img src="assets/images/img_arrow_1_blue_gray_900_01.svg" alt="Стрілка">
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer class="footer animate-on-scroll">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/images/img_logo.svg" alt="Finsweet" class="footer-logo" width="160" height="32">
+                    <p class="footer-description">Ми завжди відкриті до обговорення вашого проєкту та покращення вашої онлайн-присутності.</p>
+                </div>
+                <div class="footer-cta">
+                    <h3 class="section-title">Давайте поговоримо!</h3>
+                    <p class="section-description">Ми допоможемо вам покращити ваш UX/UI дизайн та онлайн-бренд.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_facebook_negative.svg" alt="Facebook" class="social-link">
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_twitter_negative.svg" alt="Twitter" class="social-link">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_instagram_negative.svg" alt="Instagram" class="social-link">
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_vector.svg" alt="LinkedIn" class="social-link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-label">Напишіть нам</div>
+                        <div class="contact-value"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=smushakbohdan@gmail.com" target=_blank>finsweet@gmail.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Зателефонуйте</div>
+                        <div class="contact-value"><a href="tel:0927627728525">0927 6277 28525</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">© 2022, Finsweet.com — Усі права захищено</div>
+                <nav class="footer-nav">
+                    <a class="footer-nav-item">Головна</a>
+                    <a href="aboutus.html" class="footer-nav-item">Про нас</a>
+                    <a href="features.html" class="footer-nav-item">Можливості</a>
+                    <a href="price.html" class="footer-nav-item">Ціни</a>
+                    <a href="#" class="footer-nav-item">FAQ</a>
+                    <a href="blog.html" class="footer-nav-item">Блог</a>
+                    <a href="policy.html" class="footer-nav-item">Політика конфіденційності</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <h2 class="modal-title">Зв'язатися з нами</h2>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Введіть ваш Email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="subject1">
+              Тема звернення
+            <span class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Опишіть, що вас цікавить (наприклад: "Landing page для стартапу")</span>
+            </span>
+              </label>
+            <input type="text" id="subject1" name="subject1" placeholder="Що вас цікавить?" required>
+          </div>
+          <div class="form-group">
+            <label for="subject2">
+              Категорія
+              <span class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Оберіть категорію вашого запиту</span>
+              </span>
+            </label>
+            <select id="subject2" name="subject2" required>
+              <option value="">Оберіть категорію</option>
+              <option value="general">📋 Загальне питання</option>
+              <option value="design">🎨 UI/UX дизайн</option>
+              <option value="development">💻 Веб-розробка</option>
+              <option value="mobile">📱 Мобільні додатки</option>
+              <option value="support">🔧 Технічна підтримка</option>
+              <option value="partnership">🤝 Партнерство</option>
+              <option value="pricing">💰 Ціни та пакети</option>
+              <option value="portfolio">📊 Портфоліо та кейси</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label for="message">
+              Повідомлення
+              <span class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Детально опишіть ваш запит або питання</span>
+              </span>
+            </label>
+            <textarea id="message" name="message" placeholder="Напишіть ваше запитання тут" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Надіслати повідомлення</button>
+      </form>
+      <div class="modal-message" id="modalMessage"></div>
+    </div>
+  </div>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Повернутись на верх"></button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

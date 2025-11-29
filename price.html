@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finsweet — Створюємо вражаючі сайти для стартапів</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fendikouas9697back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="assets/images/img_logo.svg" alt="Finsweet" class="logo">
+            <nav class="nav-menu" id="navMenu">
+                <div class="nav-overlay" id="navOverlay"></div>
+                <div class="nav-items">
+                    <a href="index.html" class="nav-item">Головна</a>
+                    <a href="aboutus.html" class="nav-item">Про нас</a>
+                    <a href="features.html" class="nav-item">Можливості</a>
+                    <a class="nav-item active">Ціни</a>
+                    <a href="#" class="nav-item">FAQ</a>
+                    <a href="blog.html" class="nav-item">Блог</a>
+                    <a class="nav-item contact-btn" data-open-modal>Зв’язатися з нами</a>
+                </div>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Перемикач навігації">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+  <section class="pricing-section">
+    <div class="pricing-container">
+      
+      <!-- Header -->
+      <div class="pricing-header">
+        <h1 class="pricing-title">Наші тарифи</h1>
+        <p class="pricing-description">
+          Коли ви готові вийти за межі прототипування в Figma, Webflow готовий допомогти вам втілити ваші дизайни в життя — без кодування.
+        </p>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="pricing-grid">
+        
+        <!-- Card 1: Landing Page -->
+        <div class="pricing-card">
+          <div class="pricing-price">$299</div>
+          <span class="pricing-badge">Per Design</span>
+          <h2 class="pricing-plan-title">Landing Page</h2>
+          <p class="pricing-plan-desc">
+            Коли ви готові вийти за межі прототипування в Figma.
+          </p>
+          
+          <ul class="pricing-features">
+            <li class="feature-item">All limited links</li>
+            <li class="feature-item">Own analytics platform</li>
+            <li class="feature-item">Chat support</li>
+            <li class="feature-item disabled">Optimize hashtags</li>
+            <li class="feature-item disabled">Unlimited users</li>
+          </ul>
+
+          <button class="pricing-btn" onclick="openModalprice('landing')">Детальніше</button>
+        </div>
+
+        <!-- Card 2: Website Page (Featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-price">$399</div>
+          <span class="pricing-badge">Multi Design</span>
+          <h2 class="pricing-plan-title">Website Page</h2>
+          <p class="pricing-plan-desc">
+            Коли ви готові вийти за межі прототипування в Figma, Webflow готовий допомогти.
+          </p>
+          
+          <ul class="pricing-features">
+            <li class="feature-item">All limited links</li>
+            <li class="feature-item">Own analytics platform</li>
+            <li class="feature-item">Chat support</li>
+            <li class="feature-item">Optimize hashtags</li>
+            <li class="feature-item">Unlimited users</li>
+          </ul>
+
+          <button class="pricing-btn" onclick="openModalprice('website')">Детальніше</button>
+        </div>
+
+        <!-- Card 3: Complex Project -->
+        <div class="pricing-card">
+          <div class="pricing-price">$499 +</div>
+          <span class="pricing-badge">Per Design</span>
+          <h2 class="pricing-plan-title">Complex Project</h2>
+          <p class="pricing-plan-desc">
+            Коли ви готові вийти за межі прототипування в Figma.
+          </p>
+          
+          <ul class="pricing-features">
+            <li class="feature-item">All limited links</li>
+            <li class="feature-item">Own analytics platform</li>
+            <li class="feature-item">Chat support</li>
+            <li class="feature-item">Optimize hashtags</li>
+            <li class="feature-item">Unlimited users</li>
+            <li class="feature-item">Assist and Help</li>
+          </ul>
+
+          <button class="pricing-btn" onclick="alert('Відкривається модальне вікно для зв\'язку')">Contact us</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlayprice" onclick="price()"></div>
+
+  <!-- Modal Container -->
+  <div class="modal-container" id="modalContainer" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" onclick="closeModalprice()">×</button>
+      
+      <div class="modal-header" id="modalHeader">
+        <!-- Динамічний контент -->
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Динамічний контент -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="pricing-btn modal-btn" onclick="alert('Відкривається модальне вікно для замовлення')">Замовити</button>
+      </div>
+    </div>
+  </div>
+    <!-- FAQ Section -->
+    <section class="section-wrapper faq-section animate-on-scroll">
+        <div class="faq-content">
+            <div class="faq-intro">
+                <h2 class="section-title">Часті запитання</h2>
+                <a href="#" class="faq-contact-link">Зв’яжіться з нами, щоб дізнатися більше</a>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-number">01</span>
+                <span class="faq-title">Від чого залежить ціна на розробку сайту?</span>
+                <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="22" height="22">
+            </div>
+            <div class="faq-answer">
+                Вартість формується на основі кількох ключових факторів: обсягу сторінок, дизайну, інтерактивності, а також додаткових функцій. 
+                Чим більше у проєкті кастомних елементів або складної логіки — тим вища ціна.  
+                Якщо вам потрібен точний розрахунок, ми готуємо індивідуальну оцінку після короткого брифу.
+            </div>
+          </div>
+
+          <div class="faq-item animate-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-number">02</span>
+                <span class="faq-title">Чому різні типи сторінок мають різну вартість?</span>
+                <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+            </div>
+            <div class="faq-answer">
+                Різні типи сторінок вимагають різний обсяг робіт. Наприклад, лендінг — це здебільшого одна логічна структура, тоді як багатосторінковий сайт 
+                передбачає створення унікальних секцій, інтеграцій, внутрішніх переходів і глибшу роботу з UX.  
+                Саме тому вартість **Landing Page** нижча, ніж у **Website Page** або **Complex Project**.
+            </div>
+          </div>
+
+          <div class="faq-item animate-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-number">03</span>
+                <span class="faq-title">Чи можна зробити персональний тариф?</span>
+                <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+            </div>
+            <div class="faq-answer">
+                Звичайно! Якщо ваш проєкт не підпадає під типовий тариф, ми формуємо індивідуальну пропозицію. 
+                Ви можете вибрати лише ті функції, які вам потрібні, а не переплачувати за зайве.  
+                Часто персональний пакет дозволяє зекономити, адже враховує тільки реальний обсяг роботи.
+            </div>
+          </div>
+
+          <div class="faq-item animate-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-number">04</span>
+                <span class="faq-title">Чи входить у вартість подальша підтримка?</span>
+                <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+            </div>
+            <div class="faq-answer">
+                Базова підтримка після здачі проєкту входить у вартість — ми допомагаємо розібратися з роботою сайту та вносимо дрібні зміни.  
+                Якщо вам потрібне довготривале супроводження, ми можемо підключити окремий пакет підтримки. 
+                Це вигідно, якщо плануєте постійні оновлення або розвиток проєкту.
+            </div>
+          </div>
+
+          <div class="faq-item animate-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span class="faq-number">05</span>
+                <span class="faq-title">Чи можуть ціни змінюватися після початку роботи?</span>
+                <img src="assets/images/img_blue_gray_900_01.svg" alt="Перемикач" class="faq-icon" width="16" height="16">
+            </div>
+            <div class="faq-answer">
+                Ні, після затвердження технічного завдання та підписання бюджету ціна фіксується.  
+                Вартість може змінитися лише у випадку, якщо ви вирішите додати нові функції або розширити обсяг робіт.  
+                Усі зміни погоджуються заздалегідь, тому ніяких несподіванок чи прихованих платежів не буде.
+            </div>
+          </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer animate-on-scroll">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/images/img_logo.svg" alt="Finsweet" class="footer-logo" width="160" height="32">
+                    <p class="footer-description">Ми завжди відкриті до обговорення вашого проєкту та покращення вашої онлайн-присутності.</p>
+                </div>
+                <div class="footer-cta">
+                    <h3 class="section-title">Давайте поговоримо!</h3>
+                    <p class="section-description">Ми допоможемо вам покращити ваш UX/UI дизайн та онлайн-бренд.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_facebook_negative.svg" alt="Facebook" class="social-link">
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_twitter_negative.svg" alt="Twitter" class="social-link">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_instagram_negative.svg" alt="Instagram" class="social-link">
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/img_vector.svg" alt="LinkedIn" class="social-link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-label">Напишіть нам</div>
+                        <div class="contact-value"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=smushakbohdan@gmail.com" target=_blank>finsweet@gmail.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Зателефонуйте</div>
+                        <div class="contact-value"><a href="tel:0927 6277 28525">0927 6277 28525</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">© 2022, Finsweet.com — Усі права захищено</div>
+                <nav class="footer-nav">
+                    <a class="footer-nav-item">Головна</a>
+                    <a href="aboutus.html" class="footer-nav-item">Про нас</a>
+                    <a href="features.html" class="footer-nav-item">Можливості</a>
+                    <a class="footer-nav-item">Ціни</a>
+                    <a href="#" class="footer-nav-item">FAQ</a>
+                    <a href="blog.html" class="footer-nav-item">Блог</a>
+                    <a href="policy.html" class="footer-nav-item">Політика конфіденційності</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <div class="price-modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <h2 class="modal-title">Зв'язатися з нами</h2>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Введіть ваш Email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="subject1">
+              Тема звернення
+              <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Опишіть, що вас цікавить (наприклад: "Landing page для стартапу")</span>
+              </div>
+            </label>
+            <input type="text" id="subject1" name="subject1" placeholder="Що вас цікавить?" required>
+          </div>
+          <div class="form-group">
+            <label for="subject2">
+              Категорія
+              <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Оберіть категорію вашого запиту</span>
+              </div>
+            </label>
+            <select id="subject2" name="subject2" required>
+              <option value="">Оберіть категорію</option>
+              <option value="general">📋 Загальне питання</option>
+              <option value="design">🎨 UI/UX дизайн</option>
+              <option value="development">💻 Веб-розробка</option>
+              <option value="mobile">📱 Мобільні додатки</option>
+              <option value="support">🔧 Технічна підтримка</option>
+              <option value="partnership">🤝 Партнерство</option>
+              <option value="pricing">💰 Ціни та пакети</option>
+              <option value="portfolio">📊 Портфоліо та кейси</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label for="message">
+              Повідомлення
+              <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Детально опишіть ваш запит або питання</span>
+              </div>
+            </label>
+            <textarea id="message" name="message" placeholder="Напишіть ваше запитання тут" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Надіслати повідомлення</button>
+      </form>
+      <div class="modal-message" id="modalMessage"></div>
+    </div>
+  </div>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Повернутись на верх"></button>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
